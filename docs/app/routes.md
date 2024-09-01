@@ -14,26 +14,8 @@ title: API Routes
 
 - All the table data is returned in JSON format
 - Foreign Key columns data is looked-up from the referenced table
-- Data filtering & sorting is supported by query params
-
-- **Data Filtering:**
-
-  - For data filtering, the keys should have the same name as column names in schema
-
-    ```
-    ?int_field=1,2,3&bool_field=true&date_field=2024-01-25,2024-02-15
-
-    ?float_arr=1.2,2.6&time_arr=15:26:59,07:56:20
-
-    ?str_field=text1&str_field=text2&str_field=text3
-
-    ?str_arr=text1&str_arr=text2&str_arr=text3
-    ```
-
-  - OR clause is applied for different values of a particular column
-  - AND clause is applied among different columns
-  - For array fields, if the array contains any of the passed values, the condition is true
-  - For string fields including string array fields, the values should be passed in separate pairs
+- Data filtering, sorting and pagination is supported by query params
+- Read more [here](./get-req.md)
 
 ### GET /tableNameByPK
 

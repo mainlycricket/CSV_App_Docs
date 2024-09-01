@@ -84,3 +84,4 @@ If a column is marked as a foreign key, the referenced column is mapped with the
 ### Hash
 
 - `text` and `text[]` columns are be hashed if the `Hash` constraint is enabled.
+- Unique Columns inclduing Primary Key can't be hashed

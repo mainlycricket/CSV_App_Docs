@@ -5,7 +5,7 @@ title: SQL Generation
 ---
 
 ```bash
-go build . && ./CSV_App sql
+$ ./CSV_App sql
 ```
 
 - This generates the SQL file in `data/db.sql` for the given CSV files
@@ -14,8 +14,8 @@ go build . && ./CSV_App sql
 - Run following commands to create database and execute the `db.sql` file
 
 ```bash
-psql -h localhost -U postgres -c 'CREATE DATABASE "DB_Name"'
-psql -h localhost -U postgres -d "DB_Name" -f data/db.sql
+$ psql -h localhost -U postgres -c 'CREATE DATABASE "DB_Name"'
+$ psql -h localhost -U postgres -d "DB_Name" -f data/db.sql
 ```
 
 - `data/appConfig.json` is also generated in this step.

@@ -5,8 +5,10 @@ title: Generated App Intro
 ---
 
 ```bash
-go build . && ./CSV_App app
-cd app && ./setup.sh
+$ ./CSV_App app
+$ cd app && ./setup.sh
+# modify .env, rebuild and start the server
+$ go build . && ./app
 ```
 
 - This generates a standalone app in `./app` directory

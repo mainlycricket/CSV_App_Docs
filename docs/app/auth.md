@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 sidebar_label: Auth
 title: Auth
 ---
@@ -15,17 +15,16 @@ title: Auth
   - `role` field of `text` type with `Enums` set
   - any number of _organizational_ fields - column names can be user-decided but they must be of `text` type
 - Checkout the sample `login.csv` [here](https://github.com/mainlycricket/CSV_App/blob/main/data/login.csv)
+- The `authTable` field in `data/appConfig.json` should be the name of auth table from `schema.json` which satisfies the above mentioned constraints
+- The `orgFields` array should contain the column names choosen as _organizational_ fields in the `authTable`
 
 :::danger[Note]
-The username, password and role must be named as it is
+In auth CSV table, the username, password and role fields must be named as it is
 :::
 
 :::tip
 The organizational fields can be used to identify organzation, sub-organization, departments, sub-departments and so on
 :::
-
-- The `authTable` field in `data/appConfig.json` should be the name of auth table from `schema.json` which satisfies the above mentioned constraints
-- The `orgFields` array should contain the column names choosen as _organizational_ fields in the `authTable`
 
 ### Register Route
 
