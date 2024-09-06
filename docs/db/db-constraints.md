@@ -50,13 +50,19 @@ If a colon is present in a column label, the left part will be treated as constr
 - If no primary key is provided, a column named `__ID` is added by default in SQL file and the generated app but `schema.json`remains unmodified
 - All datatypes are allowed to be primary key
 
+### Foreign Key
+
+- Any column can be marked as foreign key as long as it referes the primary key column
+- Each foreign key column should have `onUpdate` and `onDelete` actions set with one of these options: `CASCADE` (by default), `RESTRICT`, `SET NULL`, `SET DEFAULT`, `NO ACTION`
+- If the `SET DEFAULT` option is specified, the referenced column should have a default value set
+
 ### Foreign Key Mapping
 
 If a column is marked as a foreign key, the referenced column is mapped with the following idea:
 
 - if any other table has a column with the same name and datatype, it is marked as referenced column
 - if multiple such columns exist, any one is choosen
-- if no match is found, the `ForeignTable` & `ForeignColumn` fields are left with value `__`
+- if no match is found, the `ForeignTable` & `ForeignColumn` fields are left with value `__`, and should be set manually
 
 ### Min & Max
 
@@ -73,6 +79,7 @@ If a column is marked as a foreign key, the referenced column is mapped with the
 ### Enums
 
 - Enums should be an array that specifies the allowed values for the column
+- Enums array can contain at most 25 elements
 - Each indiviual value in Enums should satisfy the individual `Min` and `Max` constraints
 - For array columns, each values_arr[i] should be present in enums array
 
@@ -85,3 +92,4 @@ If a column is marked as a foreign key, the referenced column is mapped with the
 
 - `text` and `text[]` columns are be hashed if the `Hash` constraint is enabled.
 - Unique Columns inclduing Primary Key can't be hashed
+- Foreign Key Columns can't be hashed either

@@ -84,3 +84,9 @@ The organizational fields can be used to identify organzation, sub-organization,
 ### Logout Route
 
 - Send GET request to `/__auth/logout`
+
+### Refresh Token Route
+
+- Send GET request to `/__auth/refresh`
+- Can be used to verify the current access token in the cookie
+- Sets an updated access token in the cookie
