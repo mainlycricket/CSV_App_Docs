@@ -28,8 +28,8 @@ $ goimports --help
 
 ```bash
 $ git clone git@github.com:mainlycricket/CSV_App.git
-$ go build .
 $ cd CSV_App
+$ go build .
 $ rm -r app
 $ rm data/*
 # copy csv files in ./data
@@ -61,8 +61,8 @@ $ cd app && ./setup.sh
 4. Modify the .env and start the server
 
 ```bash
-# modify .env, rebuild and start the server
-$ go build . && ./app
+# modify .env and start the server
+$ ./app
 ```
 
 Continue reading to understand all the configurations available

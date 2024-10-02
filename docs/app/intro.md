@@ -7,8 +7,8 @@ title: Generated App Intro
 ```bash
 $ ./CSV_App app
 $ cd app && ./setup.sh
-# modify .env, rebuild and start the server
-$ go build . && ./app
+# modify .env and start the server
+$ ./app
 ```
 
 - This generates a standalone app in `./app` directory
